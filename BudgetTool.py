@@ -3,7 +3,7 @@
 wanted_savings = "A"
 while type(wanted_savings) != int:
     try:
-        wanted_savings = int(input("How much would you like to save each month: "))
+        wanted_savings = int(input("How much would you like to save: "))
     except:
         print("Please enter a number")
         wanted_savings = "A"
@@ -27,6 +27,8 @@ while ans:
         print("Please enter a number")
     
 total_expences = 0
+
 for i in expences:
     total_expences = total_expences + i
-print(f"Total expenses {total_expences}")
+
+print(f"It will take {round(wanted_savings/(current_monthly_income-total_expences))} months to reach ${wanted_savings} in savings")
