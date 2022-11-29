@@ -7,7 +7,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-def Email(sender_email, sender_password, receiver_email, subject, body, attachment_path=""):
+def send_email(sender_email, sender_password, receiver_email, subject, body, attachment_path=""):
     message = MIMEMultipart()
     message["From"] = sender_email
     message["To"] = receiver_email
